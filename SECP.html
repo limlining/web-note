@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CHAPTER 1</title>
+  <style>
+    body{
+        background-image: url('https://i.pinimg.com/736x/9e/33/27/9e33276784eb3d75ff97d26ab533a135.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        color:goldenrod;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10px;
+
+    }
+    .btn{
+        background-color: khaki;
+        color:black;
+        padding: 10px 25px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 20px;
+        transition: 0.2s;
+        left:40%;
+        nav-down:20%;
+    }
+    .btn:hover {
+      background-color: #0078d7;
+      color: white;
+    }
+    .bt{
+        color:purple;
+        background-color: white;
+        position: fixed;
+        bottom: 20px;     
+        left: 50%; 
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(1, 1fr));
+      gap: 20px;
+      justify-content: left;
+      max-width: 500px;
+    }
+  </style>
+  <body>
+  <h1>SECP</h1>
+  <div class="grid">
+   <button class="btn" onclick="window.location.href='note.html'">NOTE</button>
+   <button class="btn" onclick="window.location.href='assigment.html'">ASSIGMENT</button>
+  </div>
+   <button class="bt" onclick="window.location.href='index.html'">back</button>
+    </body>
+    </head>
+</html>
