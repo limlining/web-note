@@ -2,84 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CHAPTER 1</title>
   <style>
     body {
-      background-image: url("https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80");
-      background-repeat: no-repeat;
+      background-image: url('https://i.pinimg.com/736x/9e/33/27/9e33276784eb3d75ff97d26ab533a135.jpg');
       background-size: cover;
-      color: bisque;
-      margin: 10px;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: goldenrod;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
       padding: 20px;
+      min-height: 100vh;
     }
     
     h1 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-top: 50px;
+      margin-bottom: 40px;
     }
     
-    button {
+    .btn {
       background-color: khaki;
       color: black;
-      padding: 10px 25px;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 15px;
+      transition: all 0.3s;
+      border: none;
+      width: 200px;
+      text-align: center;
+    }
+    
+    .btn:hover {
+      background-color: #0078d7;
+      color: white;
+      transform: scale(1.05);
+    }
+    
+    .bt {
+      background-color: white;
+      color: purple;
+      padding: 12px 24px;
       font-size: 16px;
       border-radius: 6px;
       cursor: pointer;
-      margin: 10px;
-      transition: 0.2s;
-      border: none;
-      display: block;
-      width: 200px;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 2px solid purple;
+      transition: all 0.3s;
     }
     
-    button:hover {
-      background-color: #0078d7;
+    .bt:hover {
+      background-color: purple;
       color: white;
     }
     
     .grid {
-      width: 60px;
-      height: 30px;
-      border: 1px solid black;
-      margin-bottom: 5px;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 50px;
     }
     
-    .bt {
-      background-color: khaki;
-      color: black;
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-    }
-    
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    li {
-      margin: 10px 0;
+    /* 响应式设计 */
+    @media (min-width: 768px) {
+      .grid {
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      .btn {
+        width: 180px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Note</h1>
+  <h1>SECP</h1>
+  
   <div class="grid">
-    <ul>
-      <li><button onclick="window.open('https://raw.githubusercontent.com/limlining/limlining/main/SECPH1013%20TEKNOLOGI%20DAN%20SYSTEM%20MAKLUMAT/1.0%20CHAPTER%201%20-%20EMERGING%20TECHNOLOGY%20IN%20ICT%202024%20(1).pptx', '_blank')">Chapter 1</button></li>
-      <li><button onclick="window.open('https://raw.githubusercontent.com/limlining/limlining/main/SECPH1013%20TEKNOLOGI%20DAN%20SYSTEM%20MAKLUMAT/2.0%20CHAPTER%202%20-%20HARDWARE%202024.pptx', '_blank')">Chapter 2</button></li>
-      <li><button onclick="window.open('https://raw.githubusercontent.com/limlining/limlining/main/SECPH1013%20TEKNOLOGI%20DAN%20SYSTEM%20MAKLUMAT/3.0%20CHAPTER%203%20-%20SOFTWARE%202023.pptx', '_blank')">Chapter 3</button></li>
-      <li><button onclick="window.open('https://raw.githubusercontent.com/limlining/limlining/main/SECPH1013%20TEKNOLOGI%20DAN%20SYSTEM%20MAKLUMAT/4.0%20CHAPTER%204%20-%20INFORMATION%20SYSTEM%20AND%20SAD%202023.pdf','_blank')">Chapter 4</button></li>
-    </ul>
+    <button class="btn" onclick="window.location.href='note.html'">NOTE</button>
+    <button class="btn" onclick="window.location.href='assignment.html'">ASSIGNMENT</button>
   </div>
   
-  <button class="bt" onclick="window.location.href='SECP.html'">Back</button>
-  <a href="SECP.html" style="display:none;">Back link</a>
+  <button class="bt" onclick="window.location.href='index.html'">Back to Home</button>
+  
+  <script>
+    // 确保文件存在
+    function checkFileExists(url) {
+      return fetch(url, { method: 'HEAD' })
+        .then(res => res.ok)
+        .catch(() => false);
+    }
+    
+    // 可选：页面加载时检查文件
+    window.onload = function() {
+      ['note.html', 'assignment.html', 'index.html'].forEach(file => {
+        checkFileExists(file).then(exists => {
+          if (!exists) {
+            console.warn(`File not found: ${file}`);
+          }
+        });
+      });
+    };
+  </script>
 </body>
 </html>
