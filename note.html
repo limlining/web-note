@@ -4,54 +4,64 @@
   <meta charset="UTF-8">
   <title>CHAPTER 1</title>
   <style>
-    body{background-image: url("C:/Users/limni/Downloads/e75b5362ee94d57f5c300098a1f9437d.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        color:bisque;
-        margin:10ptx;
+    body {
+      background-image: url("./images/background.jpg"); /* 使用相对路径 */
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: bisque;
+      margin: 10px;
     }
-    button{
-        background-color: khaki;
-        color:black;
-        padding: 10px 25px;
-        font-size: 16px;
-        border-radius: 6px;
-        cursor: pointer;
-        margin: 10px;
-        transition: 0.2s;
+    
+    button {
+      background-color: khaki;
+      color: black;
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.2s;
     }
+    
     button:hover {
       background-color: #0078d7;
       color: white;
     }
-    .grid{
+    
+    .grid {
       width: 60px;
       height: 30px;
       border: 1px solid black;
       margin-bottom: 5px;
     }
-  .bt{
-      background-color:khaki;
-      color: cornsilk;
+    
+    .bt {
+      background-color: khaki;
+      color: black; /* 修复：cornsilk 在黄色背景上看不见 */
       position: fixed;
-      bottom: 20px;     
-      left: 50%; 
-   }
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%); /* 居中 */
+    }
+    
+    ul {
+      list-style: none; /* 移除默认列表样式 */
+      padding: 0;
+    }
   </style>
-  <body>
-   <h1>Note</h1>
-   <div class="grid">
-    <u1u1>
-    <button onclick="window.open('https:/docs.google.com/presentation/d/179G6CEPEpLwB12X7WFrNoZOkRqjDEZVI/preview', '_blank')">Chapter 1</button>
-    <button onclick="window.open('https:/drive.google.com/file/d/1-UDYyYLO8k3hrH5RRZkp894MIxeBBZhe/view', '_blank')">Chapter 2</button>
-    <button onclick="window.open('https:/docs.google.com/presentation/d/1ENTbf3Rd-G8oa6LE9vq23HZql47ug1Wi/preview', '_blank')">Chapter 3</button>
-    <button onclick="window.open('https:/drive.google.com/uc?export=download&id=1ZNk3AAr2lmKtpqQjJVOJ5wVQM2ZVNX39', '_blank')">Chapter 4</button>
-    </u1u1>
-    </div>
-    <button class="bt" onclick="window.location.href='SECP.html'">back</button>
-    <a herf="SECP.html"></a>
-   </body>
-   </head>
+</head>
+<body>
+  <h1>Note</h1>
+  <div class="grid">
+    <ul>
+      <li><button onclick="window.open('https://docs.google.com/presentation/d/179G6CEPEpLwB12X7WFrNoZOkRqjDEZVI/preview', '_blank')">Chapter 1</button></li>
+      <li><button onclick="window.open('https://drive.google.com/file/d/1-UDYyYLO8k3hrH5RRZkp894MIxeBBZhe/view', '_blank')">Chapter 2</button></li>
+      <li><button onclick="window.open('https://docs.google.com/presentation/d/1ENTbf3Rd-G8oa6LE9vq23HZql47ug1Wi/preview', '_blank')">Chapter 3</button></li>
+      <li><button onclick="window.open('https://drive.google.com/uc?export=download&id=1ZNk3AAr2lmKtpqQjJVOJ5wVQM2ZVNX39', '_blank')">Chapter 4</button></li>
+    </ul>
+  </div>
   
-   </html>
-
+  <button class="bt" onclick="window.location.href='SECP.html'">Back</button>
+  <a href="SECP.html" style="display:none;"></a> <!-- 如果需要隐藏链接 -->
+</body>
+</html>
