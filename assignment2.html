@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ASSIGNMENT SECP</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/d9/02/5f/d9025f7b5bfbc01e0aa8e08193823bb4.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+        
+        button {
+            background-color: black;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 20px auto;
+            transition: 0.3s;
+            border: 2px solid white;
+            display: block;
+            width: 300px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        button:hover {
+            background-color: #0078d7;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .bt {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            padding: 15px 35px;
+            transition: 0.3s;
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 8px;
+            border: 2px solid white;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .bt:hover {
+            background-color: #ff4444;
+            color: white;
+            transform: translateX(-50%) scale(1.05);
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            margin: 25px 0;
+        }
+        
+        /* 添加按钮图标 */
+        button::before {
+            content: "📄 ";
+            font-size: 20px;
+        }
+        
+        .bt::before {
+            content: "← ";
+            font-size: 18px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            button {
+                width: 100%;
+                padding: 12px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ASSIGNMENT</h1>
+        
+        <ul>
+            <li><button onclick="window.open('https://drive.google.com/file/d/1i-pRfPtvvHWQQhQE37Mqp8GpJskA0wgd/preview', '_blank')">ASSIGNMENT 1</button></li>
+        </ul>
+    </div>
+    
+    <button class="bt" onclick="window.location.href='SECP.html'">Back</button>
+</body>
+</html>
