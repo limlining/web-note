@@ -11,57 +11,111 @@
       background-attachment: fixed;
       color: greenyellow;
       margin: 10px;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      margin-bottom: 40px;
     }
     
     button {
       background-color: khaki;
       color: black;
-      padding: 10px 25px;
+      padding: 12px 30px;
       font-size: 16px;
       border-radius: 6px;
       cursor: pointer;
-      margin: 10px;
+      margin: 10px 0;
       transition: 0.2s;
+      border: none;
+      width: 200px;
+      text-align: left;
     }
     
     button:hover {
       background-color: #0078d7;
       color: white;
+      transform: translateX(10px);
     }
     
-    .grid {
-      width: 60px;
-      height: 30px;
-      border: 1px solid black;
-      margin-bottom: 5px;
+    /* 移除.grid样式，改用容器 */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
     }
     
     .bt {
       background-color: orange;
-      color: black; /* 修复：cornsilk 在黄色背景上看不见 */
+      color: black;
       position: fixed;
-      bottom: 20px;
+      bottom: 30px;
       left: 50%;
-      transform: translateX(-50%); /* 居中 */
+      transform: translateX(-50%);
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: 2px solid white;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .bt:hover {
+      background-color: #ff8c00;
+      color: white;
+      transform: translateX(-50%) scale(1.05);
     }
     
     ul {
-      list-style: none; /* 移除默认列表样式 */
+      list-style: none;
       padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      margin: 15px 0;
+    }
+    
+    /* 为章节按钮添加序号样式 */
+    button::before {
+      content: "📘 ";
+      font-size: 18px;
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 600px) {
+      button {
+        width: 100%;
+        padding: 15px;
+      }
+      
+      .container {
+        padding: 15px;
+        margin: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Note</h1>
-  <div class="grid">
+  <div class="container">
+    <h1>CHAPTER NOTES</h1>
+    
     <ul>
-    <li><button onclick="window.open('https://drive.google.com/file/d/1F_Mepiv2iV-qeJPQmXAISKZ661JGZEMY/preview', '_blank')">Chapter 1</button></li>
-    <li><button onclick="window.open('https://drive.google.com/file/d/1cA_71tEH6knR5A9YYqihY42_oESJd3Bt/preview', '_blank')">Chapter 2</button></li>
-    <li><button onclick="window.open('https://drive.google.com/file/d/1GRc4COGDscZ-DGMvdEq0vrxzGLxDOqfo/preview', '_blank')">Chapter 3</button></li>
-    <li><button onclick="window.open('https://drive.google.com/file/d/12L90c_gvkFCs9SCS6HBNXNfwVcai9WTH/preview', '_blank')">Chapter 4</button></li>
+      <li><button onclick="window.open('https://drive.google.com/file/d/1F_Mepiv2iV-qeJPQmXAISKZ661JGZEMY/preview', '_blank')">Chapter 1</button></li>
+      <li><button onclick="window.open('https://drive.google.com/file/d/1cA_71tEH6knR5A9YYqihY42_oESJd3Bt/preview', '_blank')">Chapter 2</button></li>
+      <li><button onclick="window.open('https://drive.google.com/file/d/1GRc4COGDscZ-DGMvdEq0vrxzGLxDOqfo/preview', '_blank')">Chapter 3</button></li>
+      <li><button onclick="window.open('https://drive.google.com/file/d/12L90c_gvkFCs9SCS6HBNXNfwVcai9WTH/preview', '_blank')">Chapter 4</button></li>
+    </ul>
   </div>
   
-  <button class="bt" onclick="window.location.href='SECJ.html'">Back</button>
-  <a href="SECJ.html" style="display:none;"></a> <!-- 如果需要隐藏链接 -->
+  <button class="bt" onclick="window.location.href='SECJ.html'">← Back</button>
 </body>
 </html>
