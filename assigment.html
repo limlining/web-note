@@ -1,33 +1,84 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+<head>
     <meta charset="utf-8">
-    <head>
-        <title>ASSIGMENT SECP</title>
-        <style>
-            body{
-                background-image:url('https://i.pinimg.com/736x/a0/55/a3/a055a3cc5391382c964c01ed0177aa8a.jpg') ;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            .bt{
-                background-color: cornflowerblue;
-                color:black;
-                font-size: 40px;
-                margin: 10px;
-                transition: 0.2s;
-                left:50%;
-                bottom:40px;
-                position:fixed;
-            }
-            .bt:hover{
-                background-color: azure;
-                color:blue;
-
-            }
-        </style>
-        <body>
-            <buttom class="bt" onclick="window.location.href='SECP.html'">back</buttom>
-           
-        </body>
-    </head>
+    <title>ASSIGNMENT SECP</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/a0/55/a3/a055a3cc5391382c964c01ed0177aa8a.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        button {
+            background-color: khaki;
+            color: black;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.2s;
+            border: none;
+            display: block;
+            width: 200px;
+        }
+        
+        button:hover {
+            background-color: #0078d7;
+            color: white;
+        }
+        
+        .bt {
+            background-color: cornflowerblue;
+            color: black;
+            font-size: 20px; /* 改小了，40px太大 */
+            margin: 10px;
+            transition: 0.2s;
+            position: fixed;
+            bottom: 40px;
+            right: 40px; /* 改为right，left:50%需要搭配transform */
+            padding: 15px 30px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .bt:hover {
+            background-color: azure;
+            color: blue;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 50px;
+        }
+        
+        li {
+            margin: 15px 0;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ASSIGNMENTS</h1>
+    
+    <ul>
+        <li><button onclick="window.open('https://docs.google.com/document/d/1JVvLTd01BcIQno8CwOiodTwdqpUFfCQF/preview', '_blank')">ASSIGNMENT 1</button></li>
+        <li><button onclick="window.open('https://docs.google.com/document/d/1tSeLiX19c_hsbnU_RIoqkrQGXZElg65k/preview', '_blank')">ASSIGNMENT 2</button></li>
+    </ul>
+    
+    <button class="bt" onclick="window.location.href='SECP.html'">Back</button>
+</body>
+</html>
 </html>
