@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CHAPTER NOTES</title>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/736x/ad/c9/40/adc940fd09c5d2d1ad1f995a8ff8d957.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+      margin: 10px;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      text-shadow: 2px 2px 4px black;
+      color: yellow;
+    }
+    
+    .notes-container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid gold;
+    }
+    
+    .chapter-item {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-left: 4px solid khaki;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+    
+    .chapter-num {
+      background: khaki;
+      color: black;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    
+    button {
+      background-color: khaki;
+      color: black;
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 5px;
+      transition: 0.3s;
+      border: none;
+      font-weight: bold;
+    }
+    
+    button:hover {
+      background-color: #0078d7;
+      color: white;
+      transform: scale(1.05);
+    }
+    
+    .bt {
+      background-color: orange;
+      color: black;
+      font-size: 18px;
+      padding: 12px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 2px solid white;
+      transition: 0.3s;
+    }
+    
+    .bt:hover {
+      background-color: #ff8c00;
+      color: white;
+    }
+    
+    .chapter-title {
+      flex-grow: 1;
+      color: khaki;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>CHAPTER NOTES</h1>
+  
+  <div class="notes-container">
+    <div class="chapter-item">
+      <div class="chapter-num">1</div>
+      <div class="chapter-title">Chapter 1</div>
+      <button onclick="window.open('https://drive.google.com/file/d/1e3GQNBHzIlQRKxpwuUl4ZnW5w4Xadq_y/preview', '_blank')">Open</button>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-num">2</div>
+      <div class="chapter-title">Chapter 2</div>
+      <button onclick="window.open('https://drive.google.com/file/d/1imasB7_LVCp3k9w5wdAPT_kIHRnE_iCX/preview', '_blank')">Open</button>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-num">3</div>
+      <div class="chapter-title">Chapter 3</div>
+      <button onclick="window.open('https://drive.google.com/file/d/1VUwNg7Daex2-eI-7uW9yu8XseUM_4l1I/preview', '_blank')">Open</button>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-num">4</div>
+      <div class="chapter-title">Chapter 4</div>
+      <button onclick="window.open('https://drive.google.com/file/d/1x2f6xKADe5RMFCvRr5YLW9Ud4ICjp_38/preview', '_blank')">Open</button>
+    </div>
+  </div>
+  
+  <button class="bt" onclick="window.location.href='SECR.html'">Back</button>
+</body>
+</html>
