@@ -97,6 +97,13 @@
       color: khaki;
       font-weight: bold;
     }
+    
+    .debug-info {
+      text-align: center;
+      margin-top: 20px;
+      color: #ffcc00;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -128,6 +135,36 @@
     </div>
   </div>
   
+  <!-- 方法1：直接链接 -->
   <button class="bt" onclick="window.location.href='SECR.html'">Back</button>
+  
+  <!-- 方法2：测试链接 -->
+  <div class="debug-info">
+    <p>Back按钮将跳转到: SECR.html</p>
+    <p>如果无法跳转，请检查：</p>
+    <p>1. SECR.html是否在同一文件夹</p>
+    <p>2. 文件名是否拼写正确</p>
+  </div>
+
+  <script>
+    // 检查文件是否存在
+    function checkFileExists() {
+      fetch('SECR.html', { method: 'HEAD' })
+        .then(response => {
+          if (response.ok) {
+            console.log('SECR.html exists');
+          } else {
+            console.log('SECR.html not found');
+            alert('SECR.html文件不存在，请检查文件名和路径');
+          }
+        })
+        .catch(error => {
+          console.log('Error checking file:', error);
+        });
+    }
+    
+    // 页面加载时检查
+    window.onload = checkFileExists;
+  </script>
 </body>
 </html>
