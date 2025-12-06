@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SECI - System Engineering</title>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/1200x/f5/28/cf/f528cfd5b3b73f12477295debc110a8c.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #4169E1;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 40px;
+      color: #00008B; 
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+      font-size: 2.5em;
+    }
+    
+    .btn {
+      background-color: #87CEEB; 
+      color: #00008B;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 15px;
+      transition: all 0.3s;
+      border: 2px solid #4169E1;
+      width: 200px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .btn:hover {
+      background-color: #4169E1; 
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(65, 105, 225, 0.3);
+    }
+    
+    .bt {
+      background-color: #1E90FF; 
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 2px solid #00008B;
+      transition: all 0.3s;
+      font-weight: bold;
+    }
+    
+    .bt:hover {
+      background-color: #00008B; 
+      color: white;
+      transform: translateX(-50%) scale(1.05);
+    }
+    
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+    
+    @media (min-width: 768px) {
+      .grid {
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      .btn {
+        width: 180px;
+      }
+    }
+    
+    .title-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(65, 105, 225, 0.3);
+    }
+    
+    .btn::before {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="title-container">
+    <h1>SECI </h1>
+  </div>
+  
+  <div class="grid">
+    <button class="btn" onclick="window.location.href='note4.html'">NOTE</button>
+    <button class="btn" onclick="window.location.href='assignment3.html'">ASSIGNMENT</button>
+  </div>
+  
+  <button class="bt" onclick="window.location.href='index.html'">Back to Home</button>
+</body>
+</html>
