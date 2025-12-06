@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CHAPTER 1</title>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/1200x/03/70/aa/0370aa864b5eedecb2e9e27d940bb451.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: greenyellow;
+      margin: 10px;
+    }
+    
+    button {
+      background-color: khaki;
+      color: black;
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.2s;
+    }
+    
+    button:hover {
+      background-color: #0078d7;
+      color: white;
+    }
+    
+    .grid {
+      width: 60px;
+      height: 30px;
+      border: 1px solid black;
+      margin-bottom: 5px;
+    }
+    
+    .bt {
+      background-color: orange;
+      color: black; /* 修复：cornsilk 在黄色背景上看不见 */
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%); /* 居中 */
+    }
+    
+    ul {
+      list-style: none; /* 移除默认列表样式 */
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Note</h1>
+  <div class="grid">
+    <ul>
+    <li><button onclick="window.open('https://drive.google.com/file/d/1F_Mepiv2iV-qeJPQmXAISKZ661JGZEMY/preview', '_blank')">Chapter 1</button></li>
+    <li><button onclick="window.open('https://drive.google.com/file/d/1cA_71tEH6knR5A9YYqihY42_oESJd3Bt/preview', '_blank')">Chapter 2</button></li>
+    <li><button onclick="window.open('https://drive.google.com/file/d/1GRc4COGDscZ-DGMvdEq0vrxzGLxDOqfo/preview', '_blank')">Chapter 3</button></li>
+    <li><button onclick="window.open('https://drive.google.com/file/d/12L90c_gvkFCs9SCS6HBNXNfwVcai9WTH/preview', '_blank')">Chapter 4</button></li>
+  </div>
+  
+  <button class="bt" onclick="window.location.href='SECJ.html'">Back</button>
+  <a href="SECJ.html" style="display:none;"></a> <!-- 如果需要隐藏链接 -->
+</body>
+</html>
