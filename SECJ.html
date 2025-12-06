@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAPTER 1</title>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/1200x/16/88/fd/1688fd9632fadb366d3a2bf135d49a20.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: red;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+    
+    .btn {
+      background-color: white;
+      color: red;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 15px;
+      transition: all 0.3s;
+      border: none;
+      width: 200px;
+      text-align: center;
+    }
+    
+    .btn:hover {
+      background-color: #0078d7;
+      color: white;
+      transform: scale(1.05);
+    }
+    
+    .bt {
+      background-color: white;
+      color: purple;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 2px solid purple;
+      transition: all 0.3s;
+    }
+    
+    .bt:hover {
+      background-color: purple;
+      color: white;
+    }
+    
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+    
+    /* 响应式设计 */
+    @media (min-width: 768px) {
+      .grid {
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      .btn {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>SECJ</h1>
+  
+  <div class="grid">
+    <button class="btn" onclick="window.location.href='note2.html'">NOTE</button>
+    <button class="btn" onclick="window.location.href='assignment2.html'">ASSIGNMENT</button>
+  </div>
+  
+  <button class="bt" onclick="window.location.href='index.html'">Back to Home</button>
+  
+  <script>
+    // 确保文件存在
+    function checkFileExists(url) {
+      return fetch(url, { method: 'HEAD' })
+        .then(res => res.ok)
+        .catch(() => false);
+    }
+    
+    // 可选：页面加载时检查文件
+    window.onload = function() {
+      ['note2.html', 'assignment2.html', 'index.html'].forEach(file => {
+        checkFileExists(file).then(exists => {
+          if (!exists) {
+            console.warn(`File not found: ${file}`);
+          }
+        });
+      });
+    };
+  </script>
+</body>
+</html>
