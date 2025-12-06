@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CHAPTER NOTES</title>
+  <style>
+    body {
+    background-image: url('https://i.pinimg.com/736x/cd/24/4c/cd244ca0beb3336f2e320a3e34c3b0f7.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    
+    .note-box {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .chapter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .chapter span {
+      font-size: 18px;
+      color: #555;
+    }
+    
+    .view-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .view-btn:hover {
+      background: #0056b3;
+    }
+    
+    .back-btn {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background: #6c757d;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .back-btn:hover {
+      background: #545b62;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chapter Notes</h1>
+    
+    <div class="note-box">
+      <div class="chapter">
+        <span>Chapter 1</span>
+        <button class="view-btn" onclick="window.open('https://drive.google.com/file/d/10Dajoeq9n57sHjrNOnobjduou_-DyH0M/preview', '_blank')">View</button>
+      </div>
+    </div>
+    
+    <div class="note-box">
+      <div class="chapter">
+        <span>Chapter 2</span>
+        <button class="view-btn" onclick="window.open('https://drive.google.com/file/d/1uWUsp06Dp8YHPQ4Q0Mu87kQPmModV_gb/preview', '_blank')">View</button>
+      </div>
+    </div>
+    
+    <div class="note-box">
+      <div class="chapter">
+        <span>Chapter 3</span>
+        <button class="view-btn" onclick="window.open('https://drive.google.com/file/d/1_scc7a8H-uairmYchLn_e-j7dR7qx8ks/preview', '_blank')">View</button>
+      </div>
+    </div>
+    
+    <button class="back-btn" onclick="window.location.href='SECI.html'">Back</button>
+  </div>
+</body>
+</html>
