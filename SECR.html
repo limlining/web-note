@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SECR - Chapter 1</title>
+  <title>SECR - System Engineering</title>
   <style>
     body {
       background-image: url('https://i.pinimg.com/736x/1e/71/0b/1e710b8acb573c3f3b6ca2725557d48b.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      color: #2E8B57; 
+      color: #2E8B57;
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 20px;
@@ -21,16 +21,17 @@
       text-align: center;
       margin-top: 50px;
       margin-bottom: 40px;
-      color: #006400; 
-      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+      color: #006400;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+      font-size: 2.5em;
     }
     
     .btn {
-      background-color: #90EE90; 
+      background-color: #90EE90;
       color: #006400;
       padding: 15px 30px;
       font-size: 18px;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       margin: 15px;
       transition: all 0.3s;
@@ -38,43 +39,45 @@
       width: 200px;
       text-align: center;
       font-weight: bold;
+      display: inline-block;
     }
     
     .btn:hover {
-      background-color: #228B22; 
+      background-color: #228B22;
       color: white;
-      transform: scale(1.05);
-      box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 100, 0, 0.3);
     }
     
     .bt {
-      background-color: #32CD32; 
+      background-color: #32CD32;
       color: white;
-      padding: 12px 24px;
+      padding: 12px 30px;
       font-size: 16px;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       position: fixed;
-      bottom: 30px;
+      bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
-      border: 2px solid #006400;
+      border: none;
       transition: all 0.3s;
       font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     
     .bt:hover {
-      background-color: #006400; 
+      background-color: #006400;
       color: white;
-      transform: translateX(-50%) scale(1.05);
+      transform: translateX(-50%) scale(1.1);
     }
     
     .grid {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
-      margin-top: 50px;
+      gap: 25px;
+      margin-top: 60px;
     }
     
     @media (min-width: 768px) {
@@ -84,31 +87,50 @@
       }
       
       .btn {
-        width: 180px;
+        width: 200px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
     
     .title-container {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 40px;
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(46, 139, 87, 0.3);
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 25px;
+      border-radius: 15px;
+      margin: 40px auto;
+      max-width: 600px;
+      backdrop-filter: blur(8px);
+      border: 2px solid rgba(46, 139, 87, 0.4);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn::before {
+      content: "";
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    
+    .btn:nth-child(1)::before {
+      content: "📘";
+    }
+    
+    .btn:nth-child(2)::before {
+      content: "🔬";
     }
   </style>
 </head>
 <body>
   <div class="title-container">
-    <h1>SECR </h1>
+    <h1>SECR - SYSTEM ENGINEERING</h1>
   </div>
   
   <div class="grid">
-    <button class="btn" onclick="window.location.href='note3.html'">📘 NOTES</button>
-    <button class="btn" onclick="window.location.href='lab.html'">📝 LAB</button>
+    <button class="btn" onclick="window.location.href='note3.html'">NOTES</button>
+    <button class="btn" onclick="window.location.href='lab.html'">LAB</button>
   </div>
   
   <button class="bt" onclick="window.location.href='index.html'">🏠 Back to Home</button>
-  
 </body>
 </html>
