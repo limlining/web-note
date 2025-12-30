@@ -71,7 +71,7 @@
       margin-top: 50px;
     }
     
-    /* 响应式设计 */
+
     @media (min-width: 768px) {
       .grid {
         flex-direction: row;
@@ -90,19 +90,20 @@
   <div class="grid">
     <button class="btn" onclick="window.location.href='note.html'">NOTE</button>
     <button class="btn" onclick="window.location.href='assigment.html'">ASSIGNMENT</button>
+    <button class="btn" onclick="window.location.href='project.html'">PROJECT</button>
   </div>
   
   <button class="bt" onclick="window.location.href='index.html'">Back to Home</button>
   
   <script>
-    // 确保文件存在
+   
     function checkFileExists(url) {
       return fetch(url, { method: 'HEAD' })
         .then(res => res.ok)
         .catch(() => false);
     }
     
-    // 可选：页面加载时检查文件
+  
     window.onload = function() {
       ['note.html', 'assignment.html', 'index.html'].forEach(file => {
         checkFileExists(file).then(exists => {
@@ -115,4 +116,3 @@
   </script>
 </body>
 </html>
-
